@@ -17,3 +17,7 @@ sbt package
 ```
 spark-submit --class "WordCount" --master "local[*]" <path to the wordcount jar> "file:///<path to the text>" "file:///<path to the directory result>"
 ```
+#### Exemple
+```
+spark-submit --class "WordCount" --master "local[*]" /home/myuser/workspace/scala/WordCount/target/scala-2.12/wordcount_2.12-0.1.jar "file:///home/myuser/spark/Text.txt" "file:///home/myuser/spark/wordcount/result.txt"
+```
