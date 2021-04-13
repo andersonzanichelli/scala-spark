@@ -6,7 +6,7 @@ object WordCount {
 
     new SparkContext(new SparkConf().setAppName("Word Count"))
       .textFile(args(0))
-      .flatMap(line => line.split(" "))
+      .flatMap(line => line.split("\\W+"))
       .map(word => (word, 1))
       .reduceByKey((acc, value) => acc + value)
       .sortBy(pair => pair._2, false)
