@@ -1,3 +1,3 @@
 # scala-spark
 
-Scala project to solve Big Data problems
+Scala projects to solve Big Data problems
